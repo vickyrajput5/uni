@@ -1,0 +1,120 @@
+
+
+header {
+  background-color: #fff;
+  .page-header {
+    @include spacing-section-30;
+    .container {
+      @include flex-c-sb;
+      @include max-breakpoints(tablet-small) {
+        justify-content: unset;
+        width: 100%;
+      }
+      //toggle effect
+
+      .menu-icon {
+        display: none;
+        padding-right: 10px;
+        @include max-breakpoints(tablet-small) {
+          display: block;
+        }
+      }
+
+  .login-toggle {
+    display: block;
+    padding-right: 10px;
+    
+  }
+
+      // header logo
+      .logo {
+        max-width: 120px;
+        width: 100%;
+        height: 30px;
+        img {
+          @include max-breakpoints(tablet-small) {
+            max-width: 120px;
+          }
+        }
+      }
+
+      // navigation
+      nav {
+     
+          display: block;
+          position: absolute;
+          transform: translateX(-200%);
+          transition: all 300ms ease;
+          top: 78px;
+          left: 0;
+          background-color: $color-13;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        
+
+        ul {
+          width: 100%;
+          height: 100vh;
+           @include flex-c-c;
+          li {
+            &:not(:first-child) {
+              
+                border-top: 1px solid $color-11;
+             
+            }
+
+            a {
+              @include work-sans-semi-bold;
+              color: $color-3;
+              padding: 0 25px;
+              transition: all 0.3s ease;
+              font-size: 20px;
+              // @include max-breakpoints(tablet) {
+              //   padding: 0 15px;
+              // }
+
+              @include max-breakpoints(tablet-small) {
+                padding: 10px;
+                font-size: 15px;
+                line-height: 18px;
+              }
+
+              &:hover,
+              &:active,
+              &:focus {
+                text-decoration: underline;
+                text-shadow: 0px 0px 1px $color-3;
+              }
+            }
+
+            &:first-child {
+              a {
+                padding-left: 10px;
+                @include max-breakpoints(tablet-small) {
+                  
+                }
+              }
+            }
+
+            &:last-child {
+              a {
+                padding-right: 0;
+                @include max-breakpoints(tablet-small) {
+                  padding-right: 10px;
+                }
+              }
+            }
+          }
+        }
+
+        &.active {
+      
+            transform: translateX(0);
+         
+        }
+      }
+    }
+  }
+}
+

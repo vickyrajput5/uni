@@ -1,0 +1,112 @@
+// google font
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+
+// Font weight
+@mixin work-sans-regular {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin work-sans-semi-bold {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin work-sans-bold {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+// Font details
+@mixin h1 {
+  @include work-sans-semi-bold();
+  font-size: 72px;
+  line-height: 84px;
+  @include max-breakpoints(tablet-small) {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+@mixin h2 {
+  @include work-sans-bold();
+  font-size: 60px;
+  line-height: 70px;
+  @include max-breakpoints(tablet-small) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+@mixin h4 {
+  @include work-sans-bold();
+  font-size: 36px;
+  line-height: 42px;
+  @include max-breakpoints(tablet-small) {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+@mixin body-large {
+  @include work-sans-regular();
+  font-size: 24px;
+  line-height: 28px;
+  @include max-breakpoints(tablet-small) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+@mixin body-medium {
+  @include work-sans-regular();
+  font-size: 20px;
+  line-height: 23px;
+  @include max-breakpoints(tablet-small) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+@mixin body-default {
+  @include work-sans-regular();
+  font-size: 18px;
+  line-height: 21px;
+  @include max-breakpoints(tablet-small) {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+@mixin button-default {
+  @include work-sans-semi-bold();
+  font-size: 18px;
+  line-height: 21px;
+  @include max-breakpoints(tablet-small) {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+@mixin caption {
+  @include work-sans-regular();
+  font-size: 16px;
+  line-height: 19px;
+  @include max-breakpoints(tablet-small) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@mixin heading {
+  @include work-sans-bold();
+  font-size: 20px;
+  line-height: 23px;
+  @include max-breakpoints(tablet-small) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}

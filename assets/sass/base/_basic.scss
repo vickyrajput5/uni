@@ -1,0 +1,69 @@
+// basic styling
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  @include body-default;
+
+  &.active {
+    overflow-y: hidden;
+  }
+}
+
+:focus-visible {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+span {
+  display: block;
+}
+
+svg {
+  display: block;
+}
+
+label {
+  display: block;
+}
+
+img,
+iframe {
+  max-width: 100%;
+  display: block;
+}
+
+.table-responsive {
+  overflow-y: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: auto;
+}
+
+html.prevent-scroll {
+  &,
+  & body {
+    height: 100%;
+    overflow: hidden;
+  }
+}

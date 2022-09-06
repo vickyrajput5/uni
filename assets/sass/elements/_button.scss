@@ -1,0 +1,38 @@
+@mixin button {
+  width: fit-content;
+  padding: 16px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  @include button-default;
+  @include flex-c-c;
+  @include max-breakpoints(tablet-small) {
+    padding: 10px 15px;
+  }
+}
+
+@mixin primary-btn {
+  @include button();
+  color: $color-13;
+  background: $color-1;
+}
+
+@mixin secondary-btn {
+  @include button();
+  padding: 10px 20px;
+  background: $color-2;
+  color: $color-13;
+}
+
+@mixin tertiary-btn {
+  @include button();
+  color: $color-1;
+  background: $color-13;
+}
+
+@mixin hollow-btn {
+  @include button();
+  color: $color-13;
+  background: transparent;
+  border: 2px solid $color-13;
+}

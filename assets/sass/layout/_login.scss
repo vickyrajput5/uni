@@ -1,0 +1,232 @@
+
+
+
+.logo-top{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    margin-bottom: -20px;
+}
+.logo-top img{
+    width: 250px;
+}
+.login-page{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-info{
+    max-width: 558px;
+    width: 100%;
+    margin-top: 50px !important;
+    margin:  auto;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 45px;
+    background-color: #fff;
+    box-shadow: 0px 0px 23px 0px rgba(211, 209, 209, 0.95);
+    -webkit-box-shadow: 0px 0px 23px 0px rgba(211,209,209,0.95);
+    -moz-box-shadow: 0px 0px 23px 0px rgba(211,209,209,0.95);
+}
+
+.login-title h1{
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.logoin-logo{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.email-feild{
+    
+  
+    padding: 15px 40px;
+}
+.email-feild label{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(43, 41, 41);
+  
+}
+.email-feild input{
+    width: 100%;
+    padding: 17px 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    border: 1px solid rgb(241, 238, 238);
+    margin-top: 5px;
+    
+}
+.login-remmeber{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(43, 41, 41);
+    
+}
+.forget-pass a{
+text-decoration: none;
+color: rgb(43, 41, 41);
+font-size: 14px;
+}
+.email-feild input:focus{
+    box-shadow: 0px 0px 35px -19px rgba(105,237,16,0.75);
+-webkit-box-shadow: 0px 0px 35px -19px rgba(105,237,16,0.75);
+-moz-box-shadow: 0px 0px 35px -19px rgba(105,237,16,0.75);
+}
+.email-feild input::placeholder{
+    color: rgb(84, 84, 84);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.icon{
+position: absolute;
+right: 50px;
+top: 50%;
+transform: translate(-50%,-50%);
+}
+.icon i{
+    color: rgb(197, 181, 181);
+    font-weight: 700;
+   font-size: 20px;
+}
+.form-btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 31px 43px;
+}
+.form-btn .btn{
+    width: 100%;
+}
+.btn a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 40px;
+    background: #0000FF;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid #0000FF;
+}
+.btn a:hover{
+background-color: transparent;
+border: 2px solid #0000FF;
+transition: all .5s ease-in-out;
+color: #0000FF;
+
+}
+
+
+.form-btn{
+    padding-bottom: 40px;
+}
+
+.footer-description{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.uper{
+    color: rgb(46, 41, 41);
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+.lower{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(101, 105, 116);
+}
+.lower a{
+    text-decoration: none;
+    color: rgb(101, 105, 116);
+}
+@media (max-width:991px) {
+   .login-info{
+       width: 70%;
+   }
+}
+@media (max-width:767px) {
+    .login-info{
+        width: 100%;
+    }
+    .login-title h1{
+        font-size: 33px;
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+    .logoin-logo img{
+        width: 80px;
+    }
+}
+@media (max-width:575px) {
+    body{
+        height: 130vh;
+    }
+    .login-info{
+        padding-top: 5px;
+        padding-bottom: 40px;
+    }
+    .login-title h1{
+        font-size: 30px;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+    .logoin-logo img{
+        width: 70px;
+    }
+    .email-feild{
+        padding: 15px 5px;
+    }
+    .icon{
+        right: 20px;
+    }
+    .form-btn{
+        padding: 15px 5px;
+    }
+    .btn a{
+        padding: 9px 25px;
+        font-size: 15px;
+    }
+    .forget a{
+        font-size: 14px;
+    }
+    .footer-description{
+        bottom: 20px;
+    }
+    .uper{
+       
+        font-size: 11px;
+      
+    }
+    .lower{
+        font-size: 10px;
+     
+    }
+    .forget{
+        padding: 0px 5px;
+    }
+    .logo-top img {
+        width: 190px;
+    }
+}

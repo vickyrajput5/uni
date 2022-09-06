@@ -1,0 +1,154 @@
+footer {
+  .page-footer {
+    @include spacing-section-85;
+    .footer {
+      padding-bottom: 50px;
+      .container {
+        display: flex;
+        @include max-breakpoints(tablet-small) {
+          flex-direction: column;
+        }
+
+        .left-block {
+          width: 50%;
+          padding-right: 10px;
+          @include max-breakpoints(tablet-small) {
+            width: 100%;
+            padding-right: 0px;
+          }
+          .footer-info {
+            ul {
+              li {
+                &:not(:last-child) {
+                  padding-bottom: 30px;
+                  display: flex;
+                  @include max-breakpoints(tablet-small) {
+                    padding-bottom: 15px;
+                  }
+                }
+
+                .title {
+                  @include button-default;
+                  color: $color-1;
+                  min-width: 100px;
+                  padding-right: 5px;
+                  @include max-breakpoints(tablet-small) {
+                    min-width: 70px;
+                  }
+                }
+
+                p {
+                  color: $color-4;
+                }
+
+                .logo {
+                  a {
+                    width: fit-content;
+                    img {
+                      @include max-breakpoints(tablet-small) {
+                        max-width: 120px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .right-block {
+          width: 50%;
+          padding-left: 10px;
+          @include max-breakpoints(tablet-small) {
+            width: 100%;
+            padding-left: 0;
+            padding-top: 20px;
+          }
+
+          .newsletter {
+            margin-bottom: 30px;
+            @include max-breakpoints(tablet-small) {
+              margin-bottom: 15px;
+            }
+            label {
+              @include button-default;
+              color: $color-1;
+              margin-bottom: 20px;
+              @include max-breakpoints(tablet-small) {
+                margin-bottom: 10px;
+              }
+            }
+
+            .row {
+              display: flex;
+              @include max-breakpoints(mobile) {
+                flex-direction: column;
+              }
+
+              input {
+                max-width: unset;
+                @include max-breakpoints(mobile) {
+                  max-width: 450px;
+                }
+              }
+
+              .actions-toolbar {
+                @include max-breakpoints(mobile) {
+                  margin-top: 10px;
+                }
+                button {
+                  @include secondary-btn;
+                  @include max-breakpoints(mobile) {
+                    width: 100%;
+                    max-width: 450px;
+                  }
+                }
+              }
+            }
+          }
+
+          .social-icons {
+            ul {
+              display: flex;
+              li {
+                &:not(:first-child) {
+                  padding-left: 10px;
+                  @include max-breakpoints(tablet-small) {
+                    padding-left: 5px;
+                  }
+                }
+
+                a {
+                  img {
+                    @include max-breakpoints(tablet-small) {
+                      width: 30px;
+                      height: 30px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    background: $color-1;
+    padding: 20px 0px;
+    @include max-breakpoints(tablet-small) {
+      padding: 10px 0;
+    }
+    .container {
+      .caption {
+        @include body-default;
+        color: $color-13;
+        @include max-breakpoints(tablet-small) {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}

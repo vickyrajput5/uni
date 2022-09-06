@@ -1,0 +1,48 @@
+@mixin spacing-section-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @include max-breakpoints(tablet-small) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@mixin spacing-section-85 {
+  padding-top: 85px;
+  padding-bottom: 85px;
+  @include max-breakpoints(tablet-small) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@mixin spacing-section-70 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  @include max-breakpoints(tablet-small) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@mixin spacing-section-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include max-breakpoints(tablet) {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  @include max-breakpoints(tablet-small) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@mixin spacing-section-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include max-breakpoints(tablet-small) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

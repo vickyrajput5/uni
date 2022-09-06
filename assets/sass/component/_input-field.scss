@@ -1,0 +1,33 @@
+@mixin input-field {
+  width: 100%;
+  max-width: 350px;
+  background: $color-13;
+  color: $color-3;
+  min-height: 41px;
+  padding: 9px 7px;
+  border: 1px solid $color-11;
+  @include body-default;
+  transition: all 0.3s ease;
+  @include max-breakpoints(tablet-small) {
+    min-height: 38px;
+  }
+
+  @include max-breakpoints(mobile) {
+    max-width: 450px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid $color-9;
+  }
+
+  /* Text-field text-color */
+  &::placeholder {
+    color: $color-9;
+  }
+}
+
+.input-field {
+  @include input-field();
+}
