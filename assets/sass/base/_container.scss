@@ -1,28 +1,28 @@
-@mixin max-width($mw, $custom-mw: false) {
-  @if $mw == container {
-    max-width: 1190px;
-    width: 100%;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    @include max-breakpoints(tablet-small) {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
+// @mixin max-width($mw, $custom-mw: false) {
+//   @if $mw == container {
+//     max-width: 1190px;
+//     width: 100%;
+//     margin: 0 auto;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     @include max-breakpoints(tablet-small) {
+//       padding-left: 10px;
+//       padding-right: 10px;
+//     }
+//   }
 
-  @if $mw == custom-mw-auto {
-    width: 100%;
-    max-width: $custom-mw;
-    margin: 0 auto;
-  }
+//   @if $mw == custom-mw-auto {
+//     width: 100%;
+//     max-width: $custom-mw;
+//     margin: 0 auto;
+//   }
 
-  @if $mw == custom-mw {
-    width: 100%;
-    max-width: $custom-mw;
-  }
-}
+//   @if $mw == custom-mw {
+//     width: 100%;
+//     max-width: $custom-mw;
+//   }
+// }
 
-.container {
-  @include max-width(container);
-}
+// .container {
+//   @include max-width(container);
+// }
