@@ -12,6 +12,46 @@ header {
       }
       //toggle effect
 
+    
+      .right-menu{
+       justify-content: flex-end;
+       .shopping-cart{
+         padding-right: 15px;
+       }
+       .profile{
+         .user-icon{
+           font-weight: bold;
+           font-size: 25px;
+         }
+         .name{
+           position: relative;
+           padding-left: 15px;
+           padding-right: 15px;
+           font-weight: bold;
+           font-family: "Roboto", sans-serif;
+           .profile-list{
+            position: absolute;
+            top: 22px;
+            display: none;
+            padding: 10px 0px;
+            width: 160px;
+            background-color: aqua;
+            .pro-list-item{
+              display: flex;
+             
+              justify-content: center;
+              flex-direction: column;
+              padding: 0px 20px;
+            }
+          }
+           &:hover{
+             .profile-list
+             { display: inherit;}
+           }
+         }
+         
+       }
+      }
       .menu-icon {
         display: none;
         padding-right: 10px;
@@ -118,3 +158,69 @@ header {
   }
 }
 
+
+
+.left-menu-list {
+  padding-left: 20px;	
+}
+
+.left-menu-list ul {
+	padding: 0;
+  margin: 0;
+	list-style: none;
+	position: relative;
+	}
+	
+.left-menu-list ul li {
+	display:inline-block;
+color: #000000;
+	}
+
+.left-menu-list a {
+	display:block;
+	padding:0 10px;	
+	color:#000;
+	font-size:20px;
+	line-height: normal;
+	text-decoration:none;
+}
+
+.left-menu-list a:hover { 
+	color: rgb(83, 72, 72);
+}
+
+/* Hide Dropdowns by Default */
+.left-menu-list ul ul {
+	display: none;
+	position: absolute; 
+	top: 25px; /* the height of the main .left-menu-list */
+}
+	
+/* Display Dropdowns on Hover */
+.left-menu-list ul li:hover > ul {
+	display:inherit;
+  z-index: 121;
+  background-color: aqua;
+  padding: 5px 0px;
+  border-radius: 4px;
+}
+	
+/* Fisrt Tier Dropdown */
+.left-menu-list ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+.left-menu-list ul ul ul li {
+	position: relative;
+	top:-60px; 
+	left:170px;
+}
+
+	
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }

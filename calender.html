@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -322,13 +323,49 @@
          <div class="container">
            <!-- Menu icon -->
           
- 
-           <div class="logo">
-             <a href="index.html">
-               <img src="https://files.upei.ca/misc/upeishield.svg" alt="Logo" />
-             </a>
-           </div>
-           <div class="menu-icon login-toggle">
+ <div class="left-menu d-flex align-items-center w-50">
+    
+   <div class="logo">
+      <a href="index.html">
+        <img src="https://files.upei.ca/misc/upeishield.svg" alt="Logo" />
+      </a>
+    </div>
+
+    <div class="left-menu-list">
+      <ul>
+         
+          <li><a href="#">WordPress</a>
+          <!-- First Tier Drop Down -->
+          <ul>
+              <li><a href="home.html">Themes</a></li>
+              <li><a href="#">Plugins</a></li>
+              <li><a href="#">Tutorials</a></li>
+          </ul>        
+          </li>
+         
+      </ul>
+  </div>
+ </div>
+          <div class="right-menu d-flex align-items-center w-50">
+             <div class="shopping-cart">
+               <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+             </div>
+            <div class="profile d-flex align-items-center" style="color: #000;">
+               <div class="user-icon">
+                  <i class="fa-solid fa-circle-user"></i>
+               </div>
+               <div class="name">
+                  Taymour Ashraf Abd
+                  <ul class="profile-list">
+                     <li class="pro-list-item">
+                        <a href="#">Profile</a>
+                        <a href="login.html">Sign Out</a>
+                     </li>
+                  </ul>
+               </div>
+               
+            </div>
+            <div class="menu-icon login-toggle">
                <svg
                  width="24"
                  height="24"
@@ -359,12 +396,14 @@
                  ></rect>
                </svg>
              </div>
+            
            <nav class="navigation">
+             
              <ul>
                <li><a href="login.html" class="nav-item">Sign in</a></li>
-              
              </ul>
            </nav>
+          </div>
          </div>
        </div>
      </header>
@@ -726,6 +765,7 @@ addEventButton.onclick = function (e) {
     <script>
       $(".button-collapse").sideNav();
     </script>
+    <script src="assets/js/main.js"></script>
      <script src="assets/js/lib/jquery.min.js"></script>
   </body>
 </html>
