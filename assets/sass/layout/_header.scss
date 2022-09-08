@@ -176,11 +176,11 @@ header {
 color: #000000;
 	}
 
-.left-menu-list a {
+.left-menu-list ul li a {
 	display:block;
 	padding:0 10px;	
 	color:#000;
-	font-size:20px;
+	font-size:18px;
 	line-height: normal;
 	text-decoration:none;
 }
@@ -193,33 +193,34 @@ color: #000000;
 .left-menu-list ul ul {
 	display: none;
 	position: absolute; 
-	top: 25px; /* the height of the main .left-menu-list */
+	top: 22px; /* the height of the main .left-menu-list */
 }
 	
 /* Display Dropdowns on Hover */
 .left-menu-list ul li:hover > ul {
 	display:inherit;
   z-index: 121;
-  background-color: aqua;
   padding: 5px 0px;
   border-radius: 4px;
 }
 	
 /* Fisrt Tier Dropdown */
 .left-menu-list ul ul li {
-	width:170px;
+	width:200px;
 	float:none;
 	display:list-item;
 	position: relative;
+  padding: 10px 0px;
+  background-color: #fff;
 }
-
+.left-menu-list ul ul li a{
+  font-size: 14px !important;
+}
 /* Second, Third and more Tiers	*/
-.left-menu-list ul ul ul li {
-	position: relative;
-	top:-60px; 
-	left:170px;
-}
-
+\
+// .drop{
+//   font-size: 16px !important;
+// }
 	
 /* Change this in order to change the Dropdown symbol */
 li > a:after { content:  ' +'; }
