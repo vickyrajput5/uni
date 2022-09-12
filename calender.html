@@ -271,12 +271,16 @@
 @media (max-width:992px) {
    .content-wrapper {
       margin-left: 0;
+      width: 100%;
+   }
+   .left-block{
+      flex-direction: column;
    }
    .mobile-header {
       display: block;
    }
    .calendar-wrapper {
-      margin-top: 80px;
+      margin-top: 10px;
    }
    .sidebar-wrapper {
       background-color: #EEEEEE !important;
@@ -310,6 +314,9 @@
    .content-wrapper .container {
       padding-left: 0;
       padding-right: 0;
+   }
+   .row .col {
+      padding-right: 3px !important;
    }
 }
     </style>
@@ -416,21 +423,7 @@
     <div class="calendar-block">
         
         <div class=" left-block">
-         <div class="mobile-header z-depth-1">
- 
-             <div class="row">
-               <div class="col-2">
-                 <a href="#" data-activates="sidebar" class="button-collapse" >
-                   <i class="material-icons">menu</i>
-                 </a>
-               </div>
-               <div class="col">
-                 <h4>Events</h4>
-               </div>
-             </div>
-       
-           </div>
-       
+        
          
        
              <div class="sidebar-wrapper z-depth-2 fixed" id="sidebar">
