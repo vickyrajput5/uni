@@ -7,7 +7,7 @@ header {
     .container {
       @include flex-c-sb;
       @include max-breakpoints(tablet-small) {
-        justify-content: unset;
+        
         width: 100%;
       }
       //toggle effect
@@ -217,7 +217,7 @@ color: #000000;
   font-size: 14px !important;
 }
 /* Second, Third and more Tiers	*/
-\
+
 // .drop{
 //   font-size: 16px !important;
 // }

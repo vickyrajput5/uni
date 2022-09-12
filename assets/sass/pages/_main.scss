@@ -19,3 +19,256 @@
 // calender start
 
 // calender end
+
+// profile page start
+.profile-section{
+
+  .container{
+    .profile-page{
+     padding-top: 30px;
+      .profile-header{
+        @include spacing-section-70;
+        @include flex-c;
+        width: 100%;
+        margin: auto;
+        background-image: url(../images/profie-g.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 0 0.5;
+        padding-left: 50px;
+        padding-right: 20px;
+        border-radius: 8px;
+        @include max-breakpoints(tablet-small){
+          flex-direction: column;
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+        .profile-header-img{
+          width: 150px;
+          height: 150px;
+          
+       img{
+        width: 100%;
+        border-radius: 50%;
+       }
+        }
+        .account-img{
+          width: 70px !important;
+          height: 70px !important;
+        }
+        .profile-name{
+          padding-left: 20px;
+          .name{
+            color: aliceblue;
+            @include max-breakpoints(tablet){
+              font-size: 20px;
+            }
+            @include max-breakpoints(tablet-small){
+              font-size: 15px;
+            }
+
+          }
+          .depart{
+            color: aqua;
+            @include work-sans-semi-bold;
+            @include max-breakpoints(tablet){
+              font-size: 14px;
+            }
+            @include max-breakpoints(tablet-small){
+              font-size: 13px;
+              color: #000;
+            }
+          }
+        }
+      }
+      .account-header{
+        @include spacing-section-30;
+        .profile-name{
+          .name{
+            font-size: 22px;
+          }
+          .depart{
+            font-size: 15px;
+          }
+        }
+      }
+      .profile-nav{
+        padding-top: 20px;
+        .profile-link{
+          @include flex-c;
+          padding-left: 0px;
+          .profile-link-items{
+            &:not(:last-child){
+              padding-right: 20px;
+            }
+            a{
+              color: black;
+              font-size: 18px;
+              font-weight: 500;
+              text-decoration: none;
+              padding: 5px 8px;
+              &:hover{
+               
+                border-bottom: 2px solid rgb(28, 9, 71);
+                transition: all 0.5s;
+              }
+            }
+            .active{
+              border-bottom: 2px solid rgb(28, 9, 71);
+            }
+          }
+        }
+      }
+      .profile-drop{
+        box-shadow: 1px 3px 5px 0px rgba(236, 229, 229, 0.75);
+-webkit-box-shadow: 1px 3px 5px 0px rgba(245, 236, 236, 0.75);
+-moz-box-shadow: 1px 3px 5px 0px rgba(250, 237, 237, 0.75);
+
+        button{
+          box-shadow:none !important;
+          background-color: #fff !important;
+          @include work-sans-regular;
+         color: #D42828;
+          &:focus{
+            border: none !important;
+          }
+          i{
+            color: #D42828;
+            padding-right: 5px;
+          }
+        }
+        .accordion-body{
+          color: #D42828;
+          .pro-bar{
+            width: 100%;
+            height: 1px;
+            background-color: chocolate;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            @include max-breakpoints(tablet-small){
+              margin-top: 10px;
+              margin-bottom: 10px;
+            }
+          }
+          .pro-date{
+            font-size: 14px;
+            @include work-sans-semi-bold;
+          }
+          .dt2{
+            padding-top: 20px;
+          }
+          .pro-title{
+            @include work-sans-bold;
+            font-size: 16px;
+          }
+        }
+      }
+      .profile-body{
+        @include flex-sb;
+        @include spacing-section-30;
+        @include max-breakpoints(tablet){
+          flex-direction: column;
+        }
+        .pro-left{
+          .pro-card{
+            @include list-element(20px, 20px, 2);
+            @include max-breakpoints(mobile){
+              @include list-element(5px, 10px, 1);
+            }
+            padding-left: 0px;
+            .card-list{
+
+              .card-info{
+                box-shadow: 1px 3px 5px 0px rgba(236, 229, 229, 0.75);
+                padding: 30px 20px;
+                text-align: center;
+                border-radius: 4px;
+                .count{
+                  @include work-sans-semi-bold;
+                }
+                .count-details{
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          .account-contact-details{
+            box-shadow: 1px 3px 5px 0px rgba(236, 229, 229, 0.75);
+            padding: 20px;
+            .account-contact-info{
+              .mail{
+                padding-bottom: 10px;
+              }
+            }
+          }
+        }
+        .pro-right{
+          padding-left: 20px;
+          @include max-breakpoints(mobile){
+            padding-left: 0px;
+          }
+          .right-details{
+            padding: 30px;
+          box-shadow: 1px 3px 5px 0px rgba(236, 229, 229, 0.75);
+            .program-title{
+              h4{
+                font-size: 22px;
+                @include work-sans-semi-bold;
+                padding-bottom: 15px;
+              }
+            }
+            .program-details{
+              .pro-feild{
+                @include flex-c-sb;
+                width: 100%;
+                padding-bottom: 10px;
+                @include max-breakpoints(tablet-small){
+                  flex-direction: column;
+                  padding-bottom: 0;
+                }
+                .pro-feild-left{
+                  @include flex-sb;
+                  width: 50%;
+                  padding-right: 20px;
+                  @include max-breakpoints(tablet-small){
+                    padding-bottom: 10px;
+                    width: 100%;
+                  }
+                  label{
+                    font-size: 16px;
+                    @include work-sans-bold;
+                    @include max-breakpoints(mobile){
+                      font-size:12px ;
+                    }
+                  }
+                  .program-info{
+                    @include max-breakpoints(mobile){
+                      font-size:12px ;
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+          .account-details{
+            margin-top: 20px !important;
+            @include max-breakpoints(tablet){
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .account-right{
+          padding-left: 0px !important;
+          padding-right: 20px;
+          @include max-breakpoints(tablet){
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// profile page end
