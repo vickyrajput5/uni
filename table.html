@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <!-- ************************************************************************ !-->
+    <!-- *****                                                              ***** !-->
+    <!-- *****       ¤ Designed and Developed by  LEADconcept               ***** !-->
+    <!-- *****               http://www.leadconcept.com                     ***** !-->
+    <!-- *****                                                              ***** !-->
+    <!-- ************************************************************************ !-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/sass/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Real estate</title>
+    <style>
+      table { 
+	width: 750px; 
+	border-collapse: collapse; 
+	margin:50px auto;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background: #3498db; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+	}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+    </style>
+</head>
+<body>
+  <div class="profile-bg table-bg">
+            <!-- Header start -->
+            <header>
+              <div class="page-header">
+                <div class="container">
+                  <!-- Menu icon -->
+                 
+        <div class="left-menu d-flex align-items-center w-50">
+           
+          <div class="logo">
+             <a href="index.html">
+               <img src="https://files.upei.ca/misc/upeishield.svg" alt="Logo" />
+             </a>
+           </div>
+       
+           <div class="left-menu-list">
+             <ul>
+                
+                 <li><a href="#">UOFCANADA LINKS</a>
+                 <!-- First Tier Drop Down -->
+                 <ul>
+                     <li><a class="drop" href="https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?redirect_uri=https%3A%2F%2Fportal.azure.com%2Fsignin%2Findex%2F&response_type=code%20id_token&scope=https%3A%2F%2Fmanagement.core.windows.net%2F%2Fuser_impersonation%20openid%20email%20profile&state=OpenIdConnect.AuthenticationProperties%3DNtyr4zcY1Te8A4jOyEC2Zmc0J2coYOuzweJk3IKBkvNO6ypMlIzk0bh24qmFD4gKv_49e-JZO8OkO55cpkdGw3gnxrlADA0-y1PxOj0m37OB8inV44wFRt4cL0ltnBKQ0YreF3ZMu8LfkKDgIvIU8V8IurMZK4kXyFbY3v1EqJGJSAbZ2LEoJBf3gH8HayYkc2_t8DZFV2AXOyT8uCv9WJjUU9ZroaAQ5UD-VXvYLiJoELaJNP8tXHyMvLGmbDx7TnzUCFzXl0aGro3_FuqWLsH5fsFCjs5x1Dr7EGrQyDIM9Ntjd-CK0uq-VARdi0nWMjC_aA2kph98MRJMFYddMwoMY1eGjJ3LSCYYYxCOR4jZBVr2mWW9abHtNeGh-2-yee8KhlhvQrN6EgMxDIadVNShHnbbjD1FiqphgKtFt1ePZJ3Bt3-8cll0Q-CovkhO4j_XXhuciwH2E9rCmdB3AG29u4EU1NXn69HCfM7pZks&response_mode=form_post&nonce=637982225172649655.ODQ3OTkwYWItZmFhMy00OGU3LThiNGQtOWNkZjFmZmMzY2M1OGM0MjczZWEtOGVjZS00ZGY3LWE1OTUtZmM4NjE2MDFkMDVk&client_id=c44b4083-3bb0-49c1-b47d-974e53cbdf3c&site_id=501430&client-request-id=bbc4462c-82f3-4fc9-a8cb-7ff08cbc9132&x-client-SKU=ID_NET472&x-client-ver=6.16.0.0">D2L- LEARNING MANAGEMANT <br> SYSTEM</a></li>
+                     <li><a class="drop" href="https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?redirect_uri=https%3A%2F%2Fportal.azure.com%2Fsignin%2Findex%2F&response_type=code%20id_token&scope=https%3A%2F%2Fmanagement.core.windows.net%2F%2Fuser_impersonation%20openid%20email%20profile&state=OpenIdConnect.AuthenticationProperties%3DNtyr4zcY1Te8A4jOyEC2Zmc0J2coYOuzweJk3IKBkvNO6ypMlIzk0bh24qmFD4gKv_49e-JZO8OkO55cpkdGw3gnxrlADA0-y1PxOj0m37OB8inV44wFRt4cL0ltnBKQ0YreF3ZMu8LfkKDgIvIU8V8IurMZK4kXyFbY3v1EqJGJSAbZ2LEoJBf3gH8HayYkc2_t8DZFV2AXOyT8uCv9WJjUU9ZroaAQ5UD-VXvYLiJoELaJNP8tXHyMvLGmbDx7TnzUCFzXl0aGro3_FuqWLsH5fsFCjs5x1Dr7EGrQyDIM9Ntjd-CK0uq-VARdi0nWMjC_aA2kph98MRJMFYddMwoMY1eGjJ3LSCYYYxCOR4jZBVr2mWW9abHtNeGh-2-yee8KhlhvQrN6EgMxDIadVNShHnbbjD1FiqphgKtFt1ePZJ3Bt3-8cll0Q-CovkhO4j_XXhuciwH2E9rCmdB3AG29u4EU1NXn69HCfM7pZks&response_mode=form_post&nonce=637982225172649655.ODQ3OTkwYWItZmFhMy00OGU3LThiNGQtOWNkZjFmZmMzY2M1OGM0MjczZWEtOGVjZS00ZGY3LWE1OTUtZmM4NjE2MDFkMDVk&client_id=c44b4083-3bb0-49c1-b47d-974e53cbdf3c&site_id=501430&client-request-id=bbc4462c-82f3-4fc9-a8cb-7ff08cbc9132&x-client-SKU=ID_NET472&x-client-ver=6.16.0.0">ACADEMIC CALENDAR</a></li>
+                     <li><a class="drop" href="table.html">SCHEDULE SYSTEM</a></li>
+                     <li><a class="drop" href="https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?redirect_uri=https%3A%2F%2Fportal.azure.com%2Fsignin%2Findex%2F&response_type=code%20id_token&scope=https%3A%2F%2Fmanagement.core.windows.net%2F%2Fuser_impersonation%20openid%20email%20profile&state=OpenIdConnect.AuthenticationProperties%3DNtyr4zcY1Te8A4jOyEC2Zmc0J2coYOuzweJk3IKBkvNO6ypMlIzk0bh24qmFD4gKv_49e-JZO8OkO55cpkdGw3gnxrlADA0-y1PxOj0m37OB8inV44wFRt4cL0ltnBKQ0YreF3ZMu8LfkKDgIvIU8V8IurMZK4kXyFbY3v1EqJGJSAbZ2LEoJBf3gH8HayYkc2_t8DZFV2AXOyT8uCv9WJjUU9ZroaAQ5UD-VXvYLiJoELaJNP8tXHyMvLGmbDx7TnzUCFzXl0aGro3_FuqWLsH5fsFCjs5x1Dr7EGrQyDIM9Ntjd-CK0uq-VARdi0nWMjC_aA2kph98MRJMFYddMwoMY1eGjJ3LSCYYYxCOR4jZBVr2mWW9abHtNeGh-2-yee8KhlhvQrN6EgMxDIadVNShHnbbjD1FiqphgKtFt1ePZJ3Bt3-8cll0Q-CovkhO4j_XXhuciwH2E9rCmdB3AG29u4EU1NXn69HCfM7pZks&response_mode=form_post&nonce=637982225172649655.ODQ3OTkwYWItZmFhMy00OGU3LThiNGQtOWNkZjFmZmMzY2M1OGM0MjczZWEtOGVjZS00ZGY3LWE1OTUtZmM4NjE2MDFkMDVk&client_id=c44b4083-3bb0-49c1-b47d-974e53cbdf3c&site_id=501430&client-request-id=bbc4462c-82f3-4fc9-a8cb-7ff08cbc9132&x-client-SKU=ID_NET472&x-client-ver=6.16.0.0">TOWN ALL</a></li>
+                 </ul>        
+                 </li>
+                
+             </ul>
+         </div>
+        </div>
+                 <div class="right-menu d-flex align-items-center w-50">
+                    <div class="shopping-cart">
+                      <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                    </div>
+                   <div class="profile d-flex align-items-center" style="color: #000;">
+                      <div class="user-icon">
+                         <i class="fa-solid fa-circle-user"></i>
+                      </div>
+                      <div class="name">
+                         Taymour Ashraf Abd
+                         <ul class="profile-list">
+                            <li class="pro-list-item">
+                               <a href="profile.html">Profile</a>
+                               <a href="login.html">Sign Out</a>
+                            </li>
+                         </ul>
+                      </div>
+                      
+                   </div>
+                   <div class="menu-icon login-toggle">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          y="1.75"
+                          width="24"
+                          height="1.5"
+                          rx="0.75"
+                          fill="#14171f"
+                        ></rect>
+                        <rect
+                          y="11.25"
+                          width="24"
+                          height="1.5"
+                          rx="0.75"
+                          fill="#14171f"
+                        ></rect>
+                        <rect
+                          y="20.75"
+                          width="24"
+                          height="1.5"
+                          rx="0.75"
+                          fill="#14171f"
+                        ></rect>
+                      </svg>
+                    </div>
+                   
+                  <nav class="navigation">
+                    <div class="menu-pro">
+                    <div class="menu-list">
+                      <div class="main-menu">
+                        Account
+                      </div>
+                      <div class="list">
+                      <div class="list-item"><a class="drop" href="profile.html">Profile</a></div>
+                      <div class="list-item"><a class="drop" href="index.html">Sign Out</a></div>
+                      </div>
+                    </div>
+                    <div class="menu-list">
+                      <div class="main-menu">
+                        UOFCANADA LINKS
+                      </div>
+                      <div class="list">
+                      <div class="list-item"><a class="drop" href="https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?redirect_uri=https%3A%2F%2Fportal.azure.com%2Fsignin%2Findex%2F&response_type=code%20id_token&scope=https%3A%2F%2Fmanagement.core.windows.net%2F%2Fuser_impersonation%20openid%20email%20profile&state=OpenIdConnect.AuthenticationProperties%3DNtyr4zcY1Te8A4jOyEC2Zmc0J2coYOuzweJk3IKBkvNO6ypMlIzk0bh24qmFD4gKv_49e-JZO8OkO55cpkdGw3gnxrlADA0-y1PxOj0m37OB8inV44wFRt4cL0ltnBKQ0YreF3ZMu8LfkKDgIvIU8V8IurMZK4kXyFbY3v1EqJGJSAbZ2LEoJBf3gH8HayYkc2_t8DZFV2AXOyT8uCv9WJjUU9ZroaAQ5UD-VXvYLiJoELaJNP8tXHyMvLGmbDx7TnzUCFzXl0aGro3_FuqWLsH5fsFCjs5x1Dr7EGrQyDIM9Ntjd-CK0uq-VARdi0nWMjC_aA2kph98MRJMFYddMwoMY1eGjJ3LSCYYYxCOR4jZBVr2mWW9abHtNeGh-2-yee8KhlhvQrN6EgMxDIadVNShHnbbjD1FiqphgKtFt1ePZJ3Bt3-8cll0Q-CovkhO4j_XXhuciwH2E9rCmdB3AG29u4EU1NXn69HCfM7pZks&response_mode=form_post&nonce=637982225172649655.ODQ3OTkwYWItZmFhMy00OGU3LThiNGQtOWNkZjFmZmMzY2M1OGM0MjczZWEtOGVjZS00ZGY3LWE1OTUtZmM4NjE2MDFkMDVk&client_id=c44b4083-3bb0-49c1-b47d-974e53cbdf3c&site_id=501430&client-request-id=bbc4462c-82f3-4fc9-a8cb-7ff08cbc9132&x-client-SKU=ID_NET472&x-client-ver=6.16.0.0">D2L- LEARNING MANAGEMANT <br> SYSTEM</a></div>
+                      <div class="list-item"><a class="drop" href="https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?redirect_uri=https%3A%2F%2Fportal.azure.com%2Fsignin%2Findex%2F&response_type=code%20id_token&scope=https%3A%2F%2Fmanagement.core.windows.net%2F%2Fuser_impersonation%20openid%20email%20profile&state=OpenIdConnect.AuthenticationProperties%3DNtyr4zcY1Te8A4jOyEC2Zmc0J2coYOuzweJk3IKBkvNO6ypMlIzk0bh24qmFD4gKv_49e-JZO8OkO55cpkdGw3gnxrlADA0-y1PxOj0m37OB8inV44wFRt4cL0ltnBKQ0YreF3ZMu8LfkKDgIvIU8V8IurMZK4kXyFbY3v1EqJGJSAbZ2LEoJBf3gH8HayYkc2_t8DZFV2AXOyT8uCv9WJjUU9ZroaAQ5UD-VXvYLiJoELaJNP8tXHyMvLGmbDx7TnzUCFzXl0aGro3_FuqWLsH5fsFCjs5x1Dr7EGrQyDIM9Ntjd-CK0uq-VARdi0nWMjC_aA2kph98MRJMFYddMwoMY1eGjJ3LSCYYYxCOR4jZBVr2mWW9abHtNeGh-2-yee8KhlhvQrN6EgMxDIadVNShHnbbjD1FiqphgKtFt1ePZJ3Bt3-8cll0Q-CovkhO4j_XXhuciwH2E9rCmdB3AG29u4EU1NXn69HCfM7pZks&response_mode=form_post&nonce=637982225172649655.ODQ3OTkwYWItZmFhMy00OGU3LThiNGQtOWNkZjFmZmMzY2M1OGM0MjczZWEtOGVjZS00ZGY3LWE1OTUtZmM4NjE2MDFkMDVk&client_id=c44b4083-3bb0-49c1-b47d-974e53cbdf3c&site_id=501430&client-request-id=bbc4462c-82f3-4fc9-a8cb-7ff08cbc9132&x-client-SKU=ID_NET472&x-client-ver=6.16.0.0">ACADEMIC CALENDAR</a></div>
+                      <div class="list-item"><a class="drop" href="table.html">SCHEDULE SYSTEM</a></div>
+                      <div class="list-item"><a class="drop" href="https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?redirect_uri=https%3A%2F%2Fportal.azure.com%2Fsignin%2Findex%2F&response_type=code%20id_token&scope=https%3A%2F%2Fmanagement.core.windows.net%2F%2Fuser_impersonation%20openid%20email%20profile&state=OpenIdConnect.AuthenticationProperties%3DNtyr4zcY1Te8A4jOyEC2Zmc0J2coYOuzweJk3IKBkvNO6ypMlIzk0bh24qmFD4gKv_49e-JZO8OkO55cpkdGw3gnxrlADA0-y1PxOj0m37OB8inV44wFRt4cL0ltnBKQ0YreF3ZMu8LfkKDgIvIU8V8IurMZK4kXyFbY3v1EqJGJSAbZ2LEoJBf3gH8HayYkc2_t8DZFV2AXOyT8uCv9WJjUU9ZroaAQ5UD-VXvYLiJoELaJNP8tXHyMvLGmbDx7TnzUCFzXl0aGro3_FuqWLsH5fsFCjs5x1Dr7EGrQyDIM9Ntjd-CK0uq-VARdi0nWMjC_aA2kph98MRJMFYddMwoMY1eGjJ3LSCYYYxCOR4jZBVr2mWW9abHtNeGh-2-yee8KhlhvQrN6EgMxDIadVNShHnbbjD1FiqphgKtFt1ePZJ3Bt3-8cll0Q-CovkhO4j_XXhuciwH2E9rCmdB3AG29u4EU1NXn69HCfM7pZks&response_mode=form_post&nonce=637982225172649655.ODQ3OTkwYWItZmFhMy00OGU3LThiNGQtOWNkZjFmZmMzY2M1OGM0MjczZWEtOGVjZS00ZGY3LWE1OTUtZmM4NjE2MDFkMDVk&client_id=c44b4083-3bb0-49c1-b47d-974e53cbdf3c&site_id=501430&client-request-id=bbc4462c-82f3-4fc9-a8cb-7ff08cbc9132&x-client-SKU=ID_NET472&x-client-ver=6.16.0.0">TOWN ALL</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  </nav>
+                 </div>
+                </div>
+              </div>
+            </header>
+    <!-- Header end -->
+  <!-- login main start -->
+    <div class="table-section">
+        
+        <div class="container">
+          <div class="table-page" data-aos="zoom-in">
+            <table>
+              <thead>
+                <tr>
+                  <th>Subject Name</th>
+                  <th>Overall</th>
+                  <th>Home Work</th>
+                  <th>Exams</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-column="First Name">Computer</td>
+                  <td data-column="Last Name">100%</td>
+                  <td data-column="Job Title">80%</td>
+                  <td data-column="Twitter">20%</td>
+                </tr>
+                <tr>
+                  <td data-column="First Name">Computer</td>
+                  <td data-column="Last Name">100%</td>
+                  <td data-column="Job Title">80%</td>
+                  <td data-column="Twitter">20%</td>
+                </tr>
+                <tr>
+                  <td data-column="First Name">Computer</td>
+                  <td data-column="Last Name">100%</td>
+                  <td data-column="Job Title">80%</td>
+                  <td data-column="Twitter">20%</td>
+                </tr>
+                <tr>
+                  <td data-column="First Name">Computer</td>
+                  <td data-column="Last Name">100%</td>
+                  <td data-column="Job Title">80%</td>
+                  <td data-column="Twitter">20%</td>
+                </tr>
+                <tr>
+                  <td data-column="First Name">Computer</td>
+                  <td data-column="Last Name">100%</td>
+                  <td data-column="Job Title">80%</td>
+                  <td data-column="Twitter">20%</td>
+                </tr>
+                <tr>
+                  <td data-column="First Name">Computer</td>
+                  <td data-column="Last Name">100%</td>
+                  <td data-column="Job Title">80%</td>
+                  <td data-column="Twitter">20%</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+       
+    </div>
+<!-- login main end -->
+
+<!-- Footer start -->
+<footer>
+    <div class="container">
+     <div class="footer-description">
+         <p class="uper">2022 © All rights reserved by University
+         </p>
+         <p class="lower">Designed and Developed by <a href="" target="_blank">WS</a></p>
+     </div>
+    </div>
+ </footer>
+ <!-- footer end -->
+  </div>
+    
+ <!-- Include jquery file -->
+ <script src="assets/js/lib/jquery.min.js"></script>
+<script>
+
+    function auth(){
+        var email = document.forms["Myform"]["Uname"].value;
+        var Password = document.forms["Myform"]["pass"].value;
+        if(email == "admin@gmail.com" && Password == "12345"){
+        window.location.href="calender.html";
+        }
+        else{
+            alert("invalid information");
+           
+        }
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ <!-- Include AOS js file -->
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+ <!-- Include main.js file -->
+ <script src="assets/js/main.js"></script>
+
+ <!-- Initialize the AOS animation -->
+ <script>
+   AOS.init({
+     duration: 1000,
+   });
+ </script>
+</body>
+</html>
