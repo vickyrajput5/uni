@@ -17,8 +17,14 @@ header {
        justify-content: flex-end;
        .shopping-cart{
          padding-right: 15px;
+         @include max-breakpoints(tablet-small){
+          display: none;
+         }
        }
        .profile{
+        @include max-breakpoints(tablet-small){
+          display: none !important;
+         }
          .user-icon{
            font-weight: bold;
            font-size: 25px;
@@ -38,10 +44,15 @@ header {
             background-color: aqua;
             .pro-list-item{
               display: flex;
-             
               justify-content: center;
               flex-direction: column;
               padding: 0px 20px;
+              a{
+                font-size: 16px;
+                color: #000;
+                text-decoration: none;
+
+              }
             }
           }
            &:hover{
@@ -63,7 +74,7 @@ header {
   .login-toggle {
     display: block;
     padding-right: 10px;
-    
+    cursor: pointer;
   }
 
       // header logo
@@ -153,7 +164,43 @@ header {
             transform: translateX(0);
          
         }
+        .nav2-list{
+          align-items: flex-start !important;
+        }
+        .menu-pro{
+          width: 70%;
+          height: 60%;
+          @include flex-c-sb;
+          margin: auto;
+          @include max-breakpoints(mobile){
+            flex-direction: column;
+            align-items: self-start;
+            justify-content: center;
+          }
+          .menu-list{
+            .main-menu{
+              font-size: 16px;
+              font-weight: bold;
+              font-family: "Roboto", sans-serif;
+              color: #000;
+            }
+            .list{
+              .list-item{
+                padding-bottom: 5px;
+                a{
+                  text-decoration: none;
+                  color: #000;
+                  font-size: 16px;
+                  font-weight: 500;
+                  font-family: 'Roboto', sans-serif;
+                  line-height: normal;
+                }
+              }
+            }
+          }
+        }
       }
+     
     }
   }
 }
@@ -162,6 +209,9 @@ header {
 
 .left-menu-list {
   padding-left: 20px;	
+  @include max-breakpoints(tablet-small){
+    display: none;
+   }
 }
 
 .left-menu-list ul {
