@@ -31,6 +31,7 @@
         @include flex-c;
         width: 100%;
         margin: auto;
+        overflow-x: hidden;
         background-image: url(../images/profie-g.jpg);
         background-position: center;
         background-size: cover;
@@ -67,6 +68,7 @@
             @include max-breakpoints(tablet-small){
               font-size: 15px;
             }
+           
 
           }
           .depart{
@@ -167,6 +169,7 @@
       .profile-body{
         @include flex-sb;
         @include spacing-section-30;
+        overflow-x: hidden;
         @include max-breakpoints(tablet){
           flex-direction: column;
         }
@@ -267,8 +270,18 @@
           }
         }
       }
+      
     }
   }
 }
 
 // profile page end
+
+// table start
+.table-bg{
+  background-image: url(../images/table-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+// table end

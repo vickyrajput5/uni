@@ -126,7 +126,7 @@ transform: translate(-50%,-50%);
     background: #0000FF;
     border-radius: 4px;
     text-decoration: none;
-    color: #fff;
+    color: #fff !important;
     font-size: 20px;
     font-weight: 500;
     border: 2px solid #0000FF;
@@ -135,7 +135,7 @@ transform: translate(-50%,-50%);
 background-color: transparent;
 border: 2px solid #0000FF;
 transition: all .5s ease-in-out;
-color: #0000FF;
+color: #0000FF !important;
 
 }
 
